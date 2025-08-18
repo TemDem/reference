@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Проект — индекс</title>
+	<style>
+		/* Базовый ресет */
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box
+		}
+
+		html,
+		body {
+			height: 100%
+		}
+
+		body {
+			margin: 0;
+			font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+			color: #111;
+			background: #f5f7fa;
+		}
+
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 48px 24px;
+		}
+
+		h1 {
+			font-size: 28px;
+			margin: 0 0 8px
+		}
+
+		.lead {
+			color: #5a6573;
+			margin: 0 0 24px
+		}
+
+		/* Карточки */
+		.cards {
+			display: grid;
+			gap: 16px
+		}
+
+		@media (min-width:720px) {
+			.cards {
+				grid-template-columns: 1fr 1fr
+			}
+		}
+
+		.card {
+			background: #fff;
+			border: 1px solid #e6e9ee;
+			border-radius: 12px;
+			padding: 20px 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+
+		.card h2 {
+			font-size: 16px;
+			margin: 0;
+			color: #1a1f26
+		}
+
+		.list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: grid;
+			gap: 10px
+		}
+
+		.list li {
+			display: flex;
+			justify-content: space-between;
+			gap: 12px
+		}
+
+		a {
+			color: #0b57d0;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		a:hover {
+			text-decoration: underline
+		}
+
+		.hint {
+			color: #6b7786;
+			font-size: 12px
+		}
+
+		/* Подвал */
+		.footer {
+			margin-top: 28px;
+			color: #6b7786;
+			font-size: 13px;
+		}
+
+		/* Небольшая «пилюля» с версией/статусом */
+		.badge {
+			font-size: 12px;
+			line-height: 1;
+			background: #eef2f7;
+			color: #3a4451;
+			border-radius: 999px;
+			padding: 6px 10px;
+			align-self: flex-start;
+		}
+	</style>
+</head>
+
+<body>
+	<main class="container">
+		<h1>Индекс проекта</h1>
+		<p class="lead">Быстрые ссылки для просмотра страниц и попапов.</p>
+
+		<section class="cards">
+			<article class="card">
+				<h2>Готовые страницы</h2>
+				<ul class="list">
+					<li>
+						<a href="home.html" target="_blank" rel="noopener">Главная</a>
+						<span class="hint">/home.html</span>
+					</li>
+				</ul>
+				<span class="badge">v1</span>
+			</article>
+
+			<article class="card">
+				<h2>Попапы (якоря)</h2>
+				<ul class="list">
+					<li>
+						<a href="home.html#order" target="_blank" rel="noopener">Оформить заказ</a>
+						<span class="hint">/home#order</span>
+					</li>
+					<li>
+						<a href="home.html#reference-1" target="_blank" rel="noopener">Справка №1</a>
+						<span class="hint">/home#reference-1</span>
+					</li>
+					<li>
+						<a href="home.html#reference-2" target="_blank" rel="noopener">Справка №2</a>
+						<span class="hint">/home#reference-2</span>
+					</li>
+				</ul>
+				<span class="badge">anchors</span>
+			</article>
+		</section>
+
+		<section class="footer">
+			<div>Контакты: <a href="mailto:l4tinica@yandex.ru">email@gmail.com</a> · <a href="https://t.me/L4tinica">@L4tinica</a></div>
+		</section>
+	</main>
+</body>
+
+</html>
